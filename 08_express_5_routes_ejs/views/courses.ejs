@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<h1>Full Stack Courses</h1>
+<table>
+  <thead>
+    <tr><th>Code</th><th>Course Title</th><th>Credits</th></tr>
+  </thead>
+  <tbody>
+    <% courses.forEach(c => { %>
+      <tr><td><%= c.code %></td><td><%= c.title %></td><td><%= c.credits %></td></tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<h2 style="margin-top:24px;">Add a New Course (POST /courses)</h2>
+<form action="/courses" method="POST">
+  <label>Course Code</label>
+  <input type="text" name="code" placeholder="e.g., FSD-105" required />
+  <label>Course Title</label>
+  <input type="text" name="title" placeholder="e.g., React & State Management" required />
+  <label>Credits</label>
+  <input type="number" name="credits" value="4" min="1" max="6" />
+  <button class="btn" type="submit">Add Course</button>
+</form>
+<%- include('partials/footer') %>

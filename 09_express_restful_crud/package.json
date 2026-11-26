@@ -1,0 +1,14 @@
+{
+  "name": "task09-express-restful-crud",
+  "version": "1.0.0",
+  "description": "Task 9: Express RESTful CRUD on Product data (name, price, description)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0"
+  }
+}

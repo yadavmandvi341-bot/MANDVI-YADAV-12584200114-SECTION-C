@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<h1>Submitted Messages</h1>
+<% submissions.forEach(s => { %>
+  <div style="border:1px solid #ede9fe; border-radius:8px; padding:14px; margin-bottom:12px;">
+    <strong><%= s.name %></strong> (<%= s.email %>)
+    <p style="margin:6px 0;"><%= s.message %></p>
+    <small style="color:#64748b;"><%= s.createdAt %></small>
+  </div>
+<% }) %>
+<%- include('partials/footer') %>

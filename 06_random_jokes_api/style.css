@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1b4b, #1e3a8a);
+  color: #faf5ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  background: #ffffff;
+  color: #1e1b4b;
+  max-width: 580px;
+  width: 100%;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+header h1 {
+  font-size: 1.7rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.controls select {
+  padding: 10px 12px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.controls button {
+  flex: 1;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #6d28d9;
+}
+
+.joke-card {
+  background: #faf5ff;
+  border: 1px solid #ede9fe;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #6d28d9;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.setup {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.delivery {
+  font-size: 1.05rem;
+  color: #059669;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.source {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: #64748b;
+}

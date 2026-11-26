@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 12 — MandviMart E-Commerce | Mandvi Yadav</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">MandviMart</div>
+    <div class="nav-tabs">
+      <button type="button" class="tab-btn active" data-tab="shop">Shop</button>
+      <button type="button" class="tab-btn" data-tab="cart">Cart (<span id="cart-count">0</span>)</button>
+      <button type="button" class="tab-btn" data-tab="orders">Successful Orders (<span id="orders-count">0</span>)</button>
+      <button type="button" class="tab-btn" data-tab="seller">Seller Master Panel</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- SHOP -->
+    <section id="tab-shop" class="tab-panel active">
+      <h1>All Products</h1>
+      <div id="shop-grid" class="grid"></div>
+    </section>
+
+    <!-- CART & PAYMENT -->
+    <section id="tab-cart" class="tab-panel">
+      <h1>Shopping Cart &amp; Payment</h1>
+      <div class="split">
+        <div class="panel-box">
+          <h2>Cart Items</h2>
+          <div id="cart-list"></div>
+          <h3 id="cart-total" style="margin-top:14px;">Total: ₹0</h3>
+        </div>
+        <div class="panel-box">
+          <h2>Payment Checkout</h2>
+          <form id="checkout-form">
+            <label for="cust-name">Full Name</label>
+            <input type="text" id="cust-name" value="Mandvi Yadav" required />
+            <label for="pay-method">Payment Method</label>
+            <select id="pay-method">
+              <option value="UPI">UPI (GPay / PhonePe)</option>
+              <option value="Credit/Debit Card">Credit / Debit Card</option>
+              <option value="Net Banking">Net Banking</option>
+            </select>
+            <label for="pay-ref">Card Last 4 Digits / UPI Ref</label>
+            <input type="text" id="pay-ref" placeholder="e.g., 4242 or mandvi@upi" required />
+            <button type="submit" class="btn-primary">Pay &amp; Place Order</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section id="tab-orders" class="tab-panel">
+      <h1>Successful Orders</h1>
+      <div id="orders-list" class="orders-list"></div>
+    </section>
+
+    <!-- SELLER MASTER PANEL -->
+    <section id="tab-seller" class="tab-panel">
+      <h1>Seller Master Panel</h1>
+      <div class="split">
+        <div class="panel-box">
+          <h2 id="seller-form-title">Add New Product</h2>
+          <form id="seller-form">
+            <input type="hidden" id="edit-id" />
+            <label for="s-name">Product Name</label>
+            <input type="text" id="s-name" required />
+            <label for="s-category">Category</label>
+            <input type="text" id="s-category" required />
+            <label for="s-price">Price (₹)</label>
+            <input type="number" id="s-price" min="1" required />
+            <label for="s-stock">Stock</label>
+            <input type="number" id="s-stock" min="0" value="10" required />
+            <label for="s-image">Image URL (optional — auto-matches product if left blank)</label>
+            <input type="url" id="s-image" placeholder="https://..." />
+            <label for="s-desc">Description</label>
+            <textarea id="s-desc" rows="3" required></textarea>
+            <div style="display:flex; gap:10px;">
+              <button type="submit" class="btn-primary" id="seller-submit-btn">Save Product</button>
+              <button type="button" class="btn-secondary" id="seller-cancel-btn" style="display:none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel-box">
+          <h2>Manage Inventory</h2>
+          <div id="seller-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

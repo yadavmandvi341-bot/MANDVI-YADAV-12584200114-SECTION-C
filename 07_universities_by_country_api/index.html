@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 7 — Universities by Country API | Mandvi Yadav</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>World Universities Finder</h1>
+      <p>Enter a country to view university names, websites, and states — Mandvi Yadav</p>
+    </header>
+
+    <form id="search-form" class="search-bar">
+      <input
+        type="text"
+        id="country-input"
+        placeholder="Enter country name (e.g., India, United States, Canada)..."
+        value="India"
+        required
+      />
+      <button type="submit" id="search-btn">Search Universities</button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <div class="table-wrap">
+      <table id="uni-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>University Name</th>
+            <th>State / Province</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody id="uni-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 — 3 Concentric Circles | Mandvi Yadav</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f4f6fb;
+      color: #312e81;
+      padding: 24px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 40px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 28px;
+    }
+    /* Concentric Circles Container */
+    .circles-stage {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    /* Radius = 30px -> Diameter = 60px */
+    .circle-outer {
+      width: 60px;
+      height: 60px;
+      background-color: #7c3aed;
+      z-index: 1;
+    }
+    /* Radius = 20px -> Diameter = 40px */
+    .circle-middle {
+      width: 40px;
+      height: 40px;
+      background-color: #f59e0b;
+      z-index: 2;
+    }
+    /* Radius = 10px -> Diameter = 20px */
+    .circle-inner {
+      width: 20px;
+      height: 20px;
+      background-color: #ef4444;
+      z-index: 3;
+    }
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>3 Concentric Circles</h1>
+    <p class="subtitle">Radii: 10px, 20px, and 30px — Mandvi Yadav (MCA, GLA University)</p>
+
+    <div class="circles-stage" aria-label="Three concentric circles of radius 30px, 20px, and 10px">
+      <div class="circle circle-outer" title="Outer Circle: Radius 30px (60px diameter)"></div>
+      <div class="circle circle-middle" title="Middle Circle: Radius 20px (40px diameter)"></div>
+      <div class="circle circle-inner" title="Inner Circle: Radius 10px (20px diameter)"></div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <span class="swatch" style="background:#ef4444;"></span>
+        <span>Inner: r = 10px</span>
+      </div>
+      <div class="legend-item">
+        <span class="swatch" style="background:#f59e0b;"></span>
+        <span>Middle: r = 20px</span>
+      </div>
+      <div class="legend-item">
+        <span class="swatch" style="background:#7c3aed;"></span>
+        <span>Outer: r = 30px</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

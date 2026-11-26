@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<h1>Welcome, <%= student %>!</h1>
+<p>This Express.js application uses the <strong>EJS</strong> template engine and manages <strong>7 routes</strong> across GET and POST requests.</p>
+<ul>
+  <li>Active Courses: <strong><%= courseCount %></strong></li>
+  <li>Contact Submissions: <strong><%= submissionCount %></strong></li>
+</ul>
+<p><a class="btn" href="/courses">Manage Courses</a> <a class="btn" href="/contact">Send Message</a></p>
+<%- include('partials/footer') %>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products | Task 11 MongoDB CRUD</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f5f3ff; margin: 0; padding: 32px 16px; }
+    .wrap { max-width: 920px; margin: 0 auto; background: #fff; padding: 28px; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+    .badge { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+    .btn { background: #7c3aed; color: #fff; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; }
+    .btn-danger { background: #dc2626; }
+    .btn-secondary { background: #475569; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin-top: 16px; }
+    .card { border: 1px solid #ede9fe; border-radius: 10px; padding: 16px; background: #faf5ff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1 style="margin:0;">MongoDB Product CRUD</h1>
+        <span class="badge">Storage: <%= dbMode %></span>
+      </div>
+      <a class="btn" href="/products/new">+ Add Product</a>
+    </div>
+    <div class="grid">
+      <% products.forEach(p => { %>
+        <div class="card">
+          <small style="color:#64748b;"><%= p.category %></small>
+          <h3 style="margin:4px 0;"><%= p.name %></h3>
+          <strong style="color:#059669;">₹<%= p.price %></strong>
+          <p style="font-size:0.9rem; color:#475569;"><%= p.description %></p>
+          <div style="display:flex; gap:8px; margin-top:10px;">
+            <a class="btn btn-secondary" href="/products/<%= p._id %>">View</a>
+            <a class="btn" href="/products/<%= p._id %>/edit">Edit</a>
+            <form action="/products/<%= p._id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

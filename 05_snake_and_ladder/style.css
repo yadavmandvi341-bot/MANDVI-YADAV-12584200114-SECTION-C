@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1b4b;
+  color: #faf5ff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.layout {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.board-wrapper {
+  background: #312e81;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 52px);
+  grid-template-rows: repeat(10, 52px);
+  border: 2px solid #475569;
+}
+
+.cell {
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  position: relative;
+  color: #1e1b4b;
+}
+
+.cell.even {
+  background: #fef3c7;
+}
+
+.cell.odd {
+  background: #dbeafe;
+}
+
+.cell.ladder-start {
+  background: #bbf7d0;
+}
+
+.cell.snake-start {
+  background: #fecaca;
+}
+
+.cell-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+.tokens {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.token {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.token.p1, .dot.p1 {
+  background: #7c3aed;
+}
+
+.token.p2, .dot.p2 {
+  background: #dc2626;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.controls {
+  flex: 1;
+  min-width: 280px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.status-card, .players-card, .legend-card, .log-card {
+  background: #312e81;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #4338ca;
+}
+
+.status-card {
+  text-align: center;
+}
+
+.turn-text {
+  margin: 8px 0;
+  font-weight: 600;
+  color: #e879f9;
+}
+
+.dice-box {
+  font-size: 2.6rem;
+  margin: 8px 0 14px;
+}
+
+.btn-roll, .btn-reset {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.btn-roll {
+  background: #22c55e;
+  color: #052e16;
+}
+
+.btn-roll:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-reset {
+  background: #475569;
+  color: #faf5ff;
+}
+
+.players-card p, .legend-card p {
+  font-size: 0.85rem;
+  margin-top: 6px;
+  color: #ddd6fe;
+}
+
+#game-log {
+  list-style: none;
+  margin-top: 8px;
+  max-height: 140px;
+  overflow-y: auto;
+  font-size: 0.82rem;
+  color: #ddd6fe;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

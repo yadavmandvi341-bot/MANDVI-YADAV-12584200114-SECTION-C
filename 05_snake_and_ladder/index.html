@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 5 — Snake & Ladder Game | Mandvi Yadav</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>Snake &amp; Ladder</h1>
+      <p>Full Stack Lab Task 5 — Mandvi Yadav</p>
+    </header>
+
+    <div class="layout">
+      <div class="board-wrapper">
+        <div id="board" class="board"></div>
+      </div>
+
+      <aside class="controls">
+        <div class="status-card">
+          <h2>Turn &amp; Dice</h2>
+          <p id="turn-indicator" class="turn-text">Player 1's Turn</p>
+          <div id="dice-box" class="dice-box">🎲</div>
+          <button id="roll-btn" class="btn-roll">Roll Dice</button>
+          <button id="reset-btn" class="btn-reset">New Game</button>
+        </div>
+
+        <div class="players-card">
+          <h3>Positions</h3>
+          <p><span class="dot p1"></span> Player 1: <strong id="p1-pos">1</strong></p>
+          <p><span class="dot p2"></span> Player 2: <strong id="p2-pos">1</strong></p>
+        </div>
+
+        <div class="legend-card">
+          <h3>Ladders &amp; Snakes</h3>
+          <p><strong>Ladders:</strong> 4→25, 13→46, 33→49, 42→63, 50→69, 62→81, 74→92</p>
+          <p><strong>Snakes:</strong> 27→5, 40→3, 43→18, 54→31, 66→45, 76→58, 89→53, 99→41</p>
+        </div>
+
+        <div class="log-card">
+          <h3>Game Log</h3>
+          <ul id="game-log"></ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

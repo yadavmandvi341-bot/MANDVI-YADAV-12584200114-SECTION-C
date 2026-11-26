@@ -1,0 +1,13 @@
+{
+  "name": "task10-express-product-api-csr",
+  "version": "1.0.0",
+  "description": "Task 10: Express Product API (id, name, price, rating) + Client-Side Rendering Frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

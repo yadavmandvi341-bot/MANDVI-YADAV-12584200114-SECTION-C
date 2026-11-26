@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 6 — Random Jokes API | Mandvi Yadav</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Random Jokes Generator</h1>
+      <p>Powered by JokeAPI &amp; Official Joke API — Mandvi Yadav</p>
+    </header>
+
+    <div class="controls">
+      <select id="category-select" aria-label="Joke category">
+        <option value="Any">Any Category</option>
+        <option value="Programming">Programming</option>
+        <option value="Misc">Misc</option>
+        <option value="Pun">Pun</option>
+      </select>
+      <button id="fetch-btn">Get Random Joke</button>
+    </div>
+
+    <section id="joke-card" class="joke-card">
+      <span id="joke-badge" class="badge">Loading...</span>
+      <p id="joke-setup" class="setup">Fetching a fresh joke for you...</p>
+      <p id="joke-delivery" class="delivery"></p>
+      <p id="api-source" class="source"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

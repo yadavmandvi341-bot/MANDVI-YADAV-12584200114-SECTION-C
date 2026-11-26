@@ -1,0 +1,15 @@
+{
+  "name": "task11-express-mongodb-crud",
+  "version": "1.0.0",
+  "description": "Task 11: Express RESTful CRUD on Product data with MongoDB (Mongoose)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.5.0"
+  }
+}
